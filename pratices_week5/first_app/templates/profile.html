@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<h3> Wellcome To Profile Page<h1>{{user}}</h1></h3>
+<a href="{% url 'passchange' %}" class="btn btn-success mx-4 text-withe">Password Change</a>
+<a href="{% url 'passchange2' %}" class="btn btn-success mx-4 text-withe"> With Out Old Password Change</a>
+
+{% endblock  %}

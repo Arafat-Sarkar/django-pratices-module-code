@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{% if messages %}
+{% for m in messages %}
+
+<h3>{{m}}</h3>
+{% endfor %}
+{% endif %}
+
+<div style = 'width: 50%; margin: auto'>
+    
+    <form method = 'POST'>
+         {%csrf_token %}
+        <h1> Login Page</h1>
+       
+        {{form|crispy}}
+       
+
+
+        <button class="btn btn-outline-warning text-dark " >Login</button>
+
+
+     
+    </form>
+</div>
+
+{% endblock  %}
